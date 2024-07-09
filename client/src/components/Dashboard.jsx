@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import LineChart from './components/charts/LineChart'; 
-import BarChart from './components/charts/BarChart';
-import ScatterPlot from './components/charts/ScatterPlot'; 
-import YearFilter from './components/filters/YearFilter';
-import TopicFilter from './components/filters/TopicFilter';
+import LineChart from './charts/LineChart'; 
+import BarChart from './charts/BarChart';
+// import ScatterPlot from './charts/ScatterPlot'; 
+import YearFilter from './filters/YearFilter';
+import TopicFilter from './filters/TopicFilter';
 // ... other filters
-import api from './services/api';
+import api from '../services/api';
 
 function Dashboard() {
     const [data, setData] = useState([]); 
@@ -36,7 +36,7 @@ function Dashboard() {
             {/* Charts */}
             <LineChart data={filteredData} />
             <BarChart data={filteredData} />
-            <ScatterPlot data={filteredData} /> 
+            {/* <ScatterPlot data={filteredData} />  */}
             {/* ... other charts */}
         </div>
     );
